@@ -98,7 +98,7 @@ function setMask(
 
   const firstPositionToNumber = prefix.length;
   const allowedKeys = [...numbers, 'Backspace', allowNegative ? '-' : ''];
-  const lengthUntilFirstThousandSeparator = 3 + decimalSeparator.length + fractionDigits;
+  const lengthUntilFirstThousandSeparator = 3 + decimalSeparator.length + (fractionDigits || 1);
 
   const addPrefixAndSuffix = (v: string) => `${prefix}${v}${suffix}`;
   const getLastPositionToNumber = (v?: string) => v?.length ?? element.value.length - suffix.length;
