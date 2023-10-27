@@ -155,7 +155,7 @@ function setMask(
         continue;
       }
 
-      if (Number.isNaN(Number(character))) continue;
+      if (!/[0-9]/.test(character)) continue;
 
       thousandsCounter -= 1;
 
